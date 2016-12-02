@@ -11,7 +11,7 @@ import datetime
 
 db.define_table('post',
                 Field('user_email', default=auth.user.email if auth.user_id else None),
-                Field('class_subject', requires=[IS_NOT_EMPTY()]),
+                Field('subject', 'text'),
                 Field('price', 'float'),
                 Field('Availability', 'boolean'),
                 Field('post_title', 'text'),

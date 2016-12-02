@@ -184,3 +184,40 @@ success!
 success!
 success!
 success!
+<<<<<<< HEAD
+=======
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+timestamp: 2016-12-02T02:07:52.815000
+ALTER TABLE post ADD subject TEXT;
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+>>>>>>> cfc66874b4a18a666f36d8b1bd23d523a23b84d1
