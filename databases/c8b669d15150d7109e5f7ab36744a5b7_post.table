@@ -175,8 +175,13 @@ I00
 sg20
 g43
 ssS'id'
+<<<<<<< HEAD
+p54
+(dp55
+=======
 p60
 (dp61
+>>>>>>> cfc66874b4a18a666f36d8b1bd23d523a23b84d1
 g14
 I512
 sg15
@@ -185,12 +190,20 @@ sg16
 I1
 sg17
 S'INTEGER PRIMARY KEY AUTOINCREMENT'
+<<<<<<< HEAD
+p56
+=======
 p62
+>>>>>>> cfc66874b4a18a666f36d8b1bd23d523a23b84d1
 sg19
 I00
 sg20
 S'id'
+<<<<<<< HEAD
+p57
+=======
 p63
+>>>>>>> cfc66874b4a18a666f36d8b1bd23d523a23b84d1
 ssS'user_email'
 p64
 (dp65
