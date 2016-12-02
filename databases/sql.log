@@ -100,3 +100,42 @@ CREATE TABLE web2py_session_slughub(
     session_data BLOB
 );
 success!
+timestamp: 2016-12-01T21:55:43.703000
+ALTER TABLE post ADD title CHAR(512);
+timestamp: 2016-12-01T21:55:43.823000
+ALTER TABLE post ADD class_subject CHAR(512);
+success!
+timestamp: 2016-12-01T21:56:47.160000
+ALTER TABLE post ADD book_title CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

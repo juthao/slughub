@@ -11,6 +11,8 @@ import datetime
 
 db.define_table('post',
                 Field('user_email', default=auth.user.email if auth.user_id else None),
+                Field('class_subject', requires=[IS_NOT_EMPTY()]),
+                Field('price', float),
                 Field('post_title', 'text'),
                 Field('post_content', 'text'),
                 Field('created_on', 'datetime', default=datetime.datetime.utcnow()),

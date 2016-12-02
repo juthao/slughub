@@ -31,6 +31,8 @@ def post_response(post_obj):
     p = dict(
         id=post_obj.id,
         title=post_obj.post_title,
+        class_subject=post_obj.class_subject,
+        price=post_obj.price,
         content=post_obj.post_content,
         author=get_user_name_from_email(post_obj.user_email),
         date_created=convertTime(post_obj.created_on),
@@ -80,6 +82,8 @@ def get_posts():
 def add_post():
     p_id = db.post.insert(
         post_title=request.post_vars.title,
+        price=request.post_vars.price,
+        
         post_content=request.post_vars.content
     )
     inserted_post = db.post(p_id)
