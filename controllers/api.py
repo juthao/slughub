@@ -96,6 +96,7 @@ def add_post():
 def update_post():
     action_post = db.post(request.post_vars.id)
     action_post.availability = request.post_vars.availabilty
+    action_post.price = request.post_vars.price
     action_post.class_subject = request.post_vars.class_subject
     action_post.post_title = request.post_vars.title
     action_post.post_content= request.post_vars.content

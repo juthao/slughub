@@ -139,3 +139,11 @@ success!
 success!
 success!
 success!
+timestamp: 2016-12-02T01:51:53.125000
+ALTER TABLE post ADD price DOUBLE;
+timestamp: 2016-12-02T01:51:53.215000
+ALTER TABLE post ADD availability CHAR(1);
+success!
+success!
+success!
+success!
