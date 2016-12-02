@@ -31,7 +31,10 @@ def post_response(post_obj):
     p = dict(
         id=post_obj.id,
         title=post_obj.post_title,
+        class_subject=post_obj.class_subject,
+        price=post_obj.price,
         content=post_obj.post_content,
+        availability=post_obj.availability,
         author=get_user_name_from_email(post_obj.user_email),
         date_created=convertTime(post_obj.created_on),
         # date_updated=timeCompare(post_obj),
@@ -80,6 +83,9 @@ def get_posts():
 def add_post():
     p_id = db.post.insert(
         post_title=request.post_vars.title,
+        price=request.post_vars.price,
+        availability=request.post_vars.availabilty,
+        class_subject=request.post_vars.class_subject,
         post_content=request.post_vars.content
     )
     inserted_post = db.post(p_id)
@@ -89,6 +95,8 @@ def add_post():
 @auth.requires_signature()
 def update_post():
     action_post = db.post(request.post_vars.id)
+    action_post.availability = request.post_vars.availabilty
+    action_post.class_subject = request.post_vars.class_subject
     action_post.post_title = request.post_vars.title
     action_post.post_content= request.post_vars.content
     action_post.updated_on = datetime.datetime.utcnow()
