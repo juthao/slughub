@@ -12,17 +12,22 @@
 {{end}}
 
 <div class="main_content">
+<img src="http://dwglogo.com/wp-content/uploads/2015/11/Reddit-Logo-Transparent.png"   width="200px">
+    <div class="post_list"><h3>UCSC CMPS 183</h3></div>
 
-<img src="https://scontent.fsnc1-2.fna.fbcdn.net/v/t34.0-12/15300743_10211495867379204_812909456_n.png?oh=d654b42219be5441ac1b38212461581f&oe=58439200"   width="200px">
+    <div ><p >Is CMPS 183 a bit too much to take for my first quarter? self.
+Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 my first quarter and didn't want to overload my self.</p>
+    </div>
 
-    
+    <br/>
+    <br/>
     <div id="vue-div" class="display:none">
 
     {{if auth.user_id:}}
         <!--ADD POST BUTTON-->
         <div class="text-right">
             <button v-if="add_post_button.display"
-                    class="btn btn-primary"
+                    class="btn btn-primary btn-lg"
                     v-on:click="button_toggle(add_post_button);
                                 clear_form();
                                 disable_edit();
@@ -30,7 +35,7 @@
             {{=icon_add}} Add new post
             </button>
             <button v-if="!add_post_button.display"
-                    class="btn btn-warning"
+                    class="btn btn-warning btn-lg"
                     v-on:click="button_toggle(add_post_button);
                                 clear_form();
                                 enable_edit();">
@@ -43,25 +48,26 @@
               enctype="multipart/form-data" method="post"
               v-if="!add_post_button.display">
 
+
+
             <div class="form-group text-right" id="submit_record__row">
+
                 <span class="help-block"></span>
             </div>
-
             <div class="form-group" id="post_post_title__row">
+
+
                 <span class="help-block"></span>
             </div>
             <div class="form-group" id="post_post_content__row">
                 <label class="control-label" for="post_post_content"
                        id="post_post_content__label">
                     Please Enter Your Post </label>
-
-
-
-                <textarea v-model="form_content" class="form-control" rows="5" cols="40" id="post_post_content"
+                <textarea v-model="form_content" class="form-control" rows="3" cols="40" id="post_post_content"
                           name="post_content"
                           rows="10"></textarea>
                 <span class="help-block"></span>
-            <input class="btn btn-primary post-button mybtn-width" type="submit" value="Post"/>
+            <input class="btn btn-primary btn-lg post-button mybtn-width" type="submit" value="Post"/>
             </div>
         </form>
     {{pass}}
