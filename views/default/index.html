@@ -27,7 +27,7 @@ Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 
         <!--ADD POST BUTTON-->
         <div class="text-right">
             <button v-if="add_post_button.display"
-                    class="btn btn-primary btn-lg"
+                    class="btn btn-primary"
                     v-on:click="button_toggle(add_post_button);
                                 clear_form();
                                 disable_edit();
@@ -35,7 +35,7 @@ Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 
             {{=icon_add}} Add new post
             </button>
             <button v-if="!add_post_button.display"
-                    class="btn btn-warning btn-lg"
+                    class="btn btn-warning"
                     v-on:click="button_toggle(add_post_button);
                                 clear_form();
                                 enable_edit();">
@@ -67,7 +67,7 @@ Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 
                           name="post_content"
                           rows="10"></textarea>
                 <span class="help-block"></span>
-            <input class="btn btn-primary btn-lg post-button mybtn-width" type="submit" value="Post"/>
+            <input class="btn btn-primary post-button mybtn-width" type="submit" value="Post"/>
             </div>
         </form>
     {{pass}}
@@ -87,7 +87,7 @@ Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 
             </div>
         </div>
         <div v-if="has_more" >
-            <button id="load_more" class="btn btn-primary btn-lg" v-on:click="get_more()">Load more</button>
+            <button id="load_more" class="btn btn-primary" v-on:click="get_more()">Load more</button>
 
         </div>
 <br/>
