@@ -39,8 +39,33 @@ def index():
     # db.post.insert(post_title="DUMMY TITLE9", post_content="dummy content!", user_email="Default Author")
     # db.post.insert(post_title="DUMMY TITLE10", post_content="dummy content!", user_email="Default Author")
     #
+    subjects = ["All Subjects", "Academic English", "American Studies", "Anthropology", "Applied Linguistics",
+                "Applied Math and Statistics", "Arabic", "Art", "Art&Des:Games&PlayableMedia",
+                "Astronomy and Astrophysics",
+                "Biochemistry and Molecular Bio", "Biology: Molecular Cell & Dev", "Biology: Molecular Cell & Dev",
+                "Biology: Ecology & Evolutionary", "Biomolecular Engineering", "Carson College",
+                "Chemistry and Biochemistry", "Chinese", "College Eight", "College Nine", "College Ten",
+                "Community Studies", "Computational Media", "Computer Engineering", "Computer Science",
+                "Cowell College",
+                "Creative Writing", "Critical Race & Ethnic Studies", "Crown College", "Digital Arts and New Media",
+                "Earth Sciences", "Economics", "Education", "Electrical Engineering", "Engineering",
+                "English-Language Literatures", "Environmental Studies", "Environmental Toxicology", "Feminist Studies",
+                "Film and Digital Media", "French", "French Literature", "Games and Playable Media", "German",
+                "German Literate", "Greek", "Greek Literature", "Hebrew", "Hindi", "History",
+                "History of Art&Visual Culture", "History of Consciousness", "Humanities",
+                "Information systems management",
+                "Italian", "Italian Literature", "Japanese", "Jewish Studies", "Kresge College", "Languages", "Latin",
+                "Latin American&Latino Studies", "Latin Literature", "Legal Studies", "Linguistics", "Literature",
+                "Mathematics", "Merrill College", "Microbiol & Environ Toxicology", "Modern Literary Studies", "Music",
+                "Oakes College", "Ocean Sciences", "Philosophy", "Physical Education", "Physics", "Politics",
+                "Porter College", "Portuguese", "Pre & Early Modern Literature", "Psychology", "Punjabi", "Russian",
+                "Science Communication", "Social Documentation", "Social Sciences", "Sociology", "Spanish",
+                "Spanish for Heritage Speakers", "Spanish for Spanish Speakers", "Spanish/Latin Amer/Latino Lit",
+                "Stevenson College", "Technology & Info Management", "Theater Arts", "UCDC", "Women's Studies",
+                "World Lit & Cultural Studies", "Writing", "Yiddish"]
 
-    return dict()
+    return dict(subjects=subjects)
+
 
 @auth.requires_login()
 def edit():
@@ -86,3 +111,6 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
+
+
+

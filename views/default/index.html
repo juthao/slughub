@@ -12,12 +12,9 @@
 {{end}}
 
 <div class="main_content">
-<img src="http://dwglogo.com/wp-content/uploads/2015/11/Reddit-Logo-Transparent.png"   width="200px">
-    <div class="post_list"><h3>UCSC CMPS 183</h3></div>
 
-    <div ><p >Is CMPS 183 a bit too much to take for my first quarter? self.
-Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 my first quarter and didn't want to overload my self.</p>
-    </div>
+<img src="https://scontent.fsnc1-2.fna.fbcdn.net/v/t34.0-12/15300743_10211495867379204_812909456_n.png?oh=fee170c073aab808f2fb1b41abcfbf83&oe=58443AC0"   width="200px">
+    <div class="container-fluid" style="background-color: lightgreen">
 
     <br/>
     <br/>
@@ -99,4 +96,12 @@ Title pretty much says it all. I plan on taking Math 19B, CMPE 16, and CMPS 183 
 </div>
 
 <script src="{{=URL('static', 'js/default_index.js')}}"></script>
+
+        <div>
+                <ul>
+                    {{for s in subjects:}}
+                        <li><a href="https://www.google.com">{{=s}}</a></li>
+                    {{pass}}
+                </ul>
+        </div>
 
