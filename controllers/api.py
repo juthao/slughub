@@ -31,11 +31,12 @@ def post_response(post_obj):
     p = dict(
         id=post_obj.id,
         title=post_obj.post_title,
+        subject=post_obj.subject,
         content=post_obj.post_content,
         author=get_user_name_from_email(post_obj.user_email),
         date_created=convertTime(post_obj.created_on),
         # date_updated=timeCompare(post_obj),
-        date_updated='Edit: '+convertTime(post_obj.updated_on) if isEdited(post_obj) else '',
+        date_updated='Edit:  '+convertTime(post_obj.updated_on) if isEdited(post_obj) else '',
         author_email=post_obj.user_email
     )
     return p
@@ -80,6 +81,7 @@ def get_posts():
 def add_post():
     p_id = db.post.insert(
         post_title=request.post_vars.title,
+        subject=request.post_vars.title,
         post_content=request.post_vars.content
     )
     inserted_post = db.post(p_id)
@@ -90,7 +92,8 @@ def add_post():
 def update_post():
     action_post = db.post(request.post_vars.id)
     action_post.post_title = request.post_vars.title
-    action_post.post_content= request.post_vars.content
+    action_post.subject = request.post_vars.subject
+    action_post.post_content = request.post_vars.content
     action_post.updated_on = datetime.datetime.utcnow()
     action_post.update_record()
 

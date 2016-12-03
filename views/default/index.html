@@ -45,21 +45,23 @@
               enctype="multipart/form-data" method="post"
               v-if="!add_post_button.display">
 
-
-
             <div class="form-group text-right" id="submit_record__row">
 
                 <span class="help-block"></span>
             </div>
             <div class="form-group" id="post_post_title__row">
-
-
                 <span class="help-block"></span>
             </div>
+
             <div class="form-group" id="post_post_content__row">
                 <label class="control-label" for="post_post_content"
                        id="post_post_content__label">
                     Please Enter Your Post </label>
+                <div>
+                    <input class="form-control" id="no_subject" v-model="form_title" placeholder="Subject" type="text" />
+                    <span class="help-block"></span>
+                </div>
+
                 <textarea v-model="form_content" class="form-control" rows="3" cols="40" id="post_post_content"
                           name="post_content"
                           rows="10"></textarea>

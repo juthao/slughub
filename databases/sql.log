@@ -96,3 +96,22 @@ CREATE TABLE web2py_session_slughub(
     session_data BLOB
 );
 success!
+timestamp: 2016-12-03T01:24:06.066000
+ALTER TABLE post ADD price DOUBLE;
+timestamp: 2016-12-03T01:24:06.163000
+ALTER TABLE post ADD availability CHAR(1);
+timestamp: 2016-12-03T01:24:11.581000
+ALTER TABLE post ADD price DOUBLE;
+timestamp: 2016-12-03T01:25:21.549000
+ALTER TABLE post ADD price DOUBLE;
+timestamp: 2016-12-03T01:25:34.476000
+ALTER TABLE post ADD availability CHAR(1);
+timestamp: 2016-12-03T01:25:34.546000
+ALTER TABLE post ADD subject TEXT;
+success!
+timestamp: 2016-12-03T01:26:13.622000
+ALTER TABLE post ADD book_price DOUBLE;
+success!
+timestamp: 2016-12-03T09:54:37.156000
+ALTER TABLE post ADD image CHAR(512);
+success!

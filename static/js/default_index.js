@@ -61,6 +61,7 @@ var app = function () {
         $.post(add_post_url,
             {
                 title: self.vue.form_title,
+                subject: self.vue.form_subject,
                 content: self.vue.form_content//.replace(/(?:\r\n|\r|\n)/g, '\t\n')
             },
             function (data) {
@@ -80,6 +81,7 @@ var app = function () {
         $.post(update_post_url,
             {
                 title: self.vue.form_title,
+                subject:self.vue.form_subject,
                 content: self.vue.form_content,//.replace(/(?:\r\n|\r|\n)/g, '\t\n')
                 id: self.vue.action_post
             },
@@ -125,13 +127,15 @@ var app = function () {
         );
     };
 
-    self.edit_post = function (title, content) {
+    self.edit_post = function (title, content, subject) {
         self.button_toggle(self.vue.add_post_button);
         self.vue.form_title = title;
+        self.vue.form_subject = subject;
         self.vue.form_content = content;
         self.vue.editing = !self.vue.editing;
         if (self.vue.editing == false) {
             self.vue.form_title = null;
+            self.vue.form_subject = null;
             self.vue.form_content = null;
         }
     };
@@ -156,6 +160,7 @@ var app = function () {
 
     self.clear_form = function () {
         self.vue.form_title = null;
+        self.vue.subject = null;
         self.vue.form_content = null;
     };
 
@@ -176,6 +181,7 @@ var app = function () {
             editing: false,
             action_post: 0,
             form_title: null,
+            form_subject: null,
             form_content: null,
             user_name: null,
             user_email: null
